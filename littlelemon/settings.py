@@ -26,7 +26,7 @@ SECRET_KEY = "django-insecure-r-%0eqcja86asp_+*1@3d6t9wm65$7^p*v^m961p@)w7*3ob0n
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://littlelemon.sharmasandip.com.np', '*']
 
 
 # Application definition
@@ -38,7 +38,6 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    # The settings for app updated for the Graded assessment
     "restaurant",
 ]
 
@@ -57,7 +56,6 @@ ROOT_URLCONF = "littlelemon.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        # The settings for templates updated for the Graded assessment
         "DIRS": [os.path.join(BASE_DIR, "templates")],
         "APP_DIRS": True,
         "OPTIONS": {
@@ -80,7 +78,7 @@ WSGI_APPLICATION = "littlelemon.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.mysql",
-        "NAME": "reservation_ll",
+        "NAME": "db_littlelemon",
         "HOST": "127.0.0.1",
         "PORT": "3306",
         "USER": "root",
@@ -123,7 +121,6 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-# The settings for static files have been updated for the Graded assessment
 STATIC_URL = "static/"
 if DEBUG:
     STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
