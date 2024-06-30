@@ -1,6 +1,6 @@
 Welcome to Littlelemon Web Application. Here you can view menu of the restaurant and book/ make reservation for your events.
 
-This Project will be deployed on [https://littlelemon.sharmmasandip.com.np] 
+This Project will be deployed on [https://littlelemon.sharmasandip.com.np] 
 
 In order to run this project you have to follow a few steps:
 1. first clone the repository.
