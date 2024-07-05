@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section>
+    <article>
+        <h1>Contact Us</h1>
+        <!--Begin row-->
+        <div class="row">
+            <!--Begin col-->
+            <div class="column">
+                <form action="{% url 'contact' %}" method="POST">
+                    {% csrf_token %}
+                    <p>
+                        <label for="full_name">Full Name:</label>
+                        <input type="text" placeholder="Your Full Name" maxlength="100" id="full_name" name="full_name"
+                            required>
+                    </p>
+                    <p>
+                        <label for="email">Email:</label>
+                        <input type="email" placeholder="Your Email Address" maxlength="100" id="email" name="email"
+                            required>
+                    </p>
+                    <p>
+                        <label for="phone">Phone:</label>
+                        <input type="text" placeholder="Your Phone Number" maxlength="15" id="phone" name="phone"
+                            required>
+                    </p>
+                    <p>
+                        <label for="subject">Subject:</label>
+                        <input type="text" placeholder="Your Subject Here" maxlength="100" id="subject" name="subject"
+                            required>
+                    </p>
+                    <p>
+                        <label for="message">Message:</label>
+                        <textarea placeholder="Your Message Here" id="message" name="message" rows="8"
+                            required></textarea>
+                    </p>
+                    <button type="submit" id="button">Send</button>
+                </form>
+            </div>
+            <!--End col-->
+
+            <!--Begin col-->
+            <div class="column">
+                <h2>We are here📌</h2>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d23796.845831439565!2d-87.591107!3d41.79371!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e2912ce6f7027%3A0xc0cfb5545d4a37b2!2sHyde%20Park%2C%20Chicago%2C%20IL%2C%20USA!5e0!3m2!1sen!2spt!4v1720179280724!5m2!1sen!2spt"
+                    width="800" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <!--End col-->
+        </div>
+        <!--End row-->
+    </article>
+</section>
+
+{% endblock %}
